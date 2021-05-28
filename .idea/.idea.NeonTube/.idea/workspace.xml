@@ -14,49 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d40aca3c-545f-4ef8-9e02-9e65cfdd6ca6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.NeonTube.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/.idea/.idea.Telegram.Bot.Examples.WebHook.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/BotConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Controllers/UpdateController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/JobSchedule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/NeonTube.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/PendingVideo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/QuartzHostedService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/BotService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/IBotService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/IUpdateService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/IVideoQueueService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Services/VideoQueueService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/SingletonJobFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NeonTube/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +27,29 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1622239042" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1622239041" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -131,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622237267844</updated>
-      <workItem from="1622237329215" duration="602000" />
+      <workItem from="1622237329215" duration="1332000" />
     </task>
     <servers />
   </component>
