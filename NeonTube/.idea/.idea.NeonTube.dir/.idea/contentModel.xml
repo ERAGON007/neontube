@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\_ERAGON_\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\_ERAGON_\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="G:\DotNet-Projects\NeonTubeWebhook" t="IncludeRecursive">
+      <e p=".dockerignore" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="BotConfiguration.cs" t="Include" />
+      <e p="Controllers" t="Include">
+        <e p="UpdateController.cs" t="Include" />
+      </e>
+      <e p="Dockerfile" t="Include" />
+      <e p="JobSchedule.cs" t="Include" />
+      <e p="NeonTube.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="net5.0" t="Include">
+            <e p="NeonTube.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PendingVideo.cs" t="Include" />
+      <e p="Program.cs" t="Include" />
+      <e p="QuartzHostedService.cs" t="Include" />
+      <e p="README.md" t="Include" />
+      <e p="Services" t="Include">
+        <e p="BotService.cs" t="Include" />
+        <e p="IBotService.cs" t="Include" />
+        <e p="IUpdateService.cs" t="Include" />
+        <e p="IVideoQueueService.cs" t="Include" />
+        <e p="UpdateService.cs" t="Include" />
+        <e p="VideoQueueService.cs" t="Include" />
+      </e>
+      <e p="SingletonJobFactory.cs" t="Include" />
+      <e p="Startup.cs" t="Include" />
+      <e p="VideoQueueJob.cs" t="Include" />
+      <e p="wwwroot" t="Include" />
+    </e>
+  </component>
+</project>
