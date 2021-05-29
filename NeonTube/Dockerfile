@@ -22,4 +22,9 @@ WORKDIR /app
 COPY --from=publish /src/publish .
 # ENTRYPOINT ["dotnet", "NeonTube.dll"]
 # heroku uses the following
-CMD ASPNETCORE_URLS=http://*:80 dotnet NeonTube.dll
+
+ENV ASPNETCORE_URLS http://*:$PORT
+# ENV ASPNETCORE_Environment=Production
+
+
+#CMD ASPNETCORE_URLS=http://*:80 dotnet NeonTube.dll

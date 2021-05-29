@@ -24,22 +24,22 @@ namespace NeonTube
         
         public async Task Execute(IJobExecutionContext context)
         {
+            PendingVideo first;
             if (_videoQueueService.Count() > 0)
             {
                 try
                 {
-                    var first = _videoQueueService.First();
+                    first = _videoQueueService.First();
 
                     if (first == null)
                         return;
-                    
-                    var firstQueue = first;
-                    
-                    var youTube = YouTube.Default;
-                    var video = await youTube.GetVideoAsync(firstQueue.Url);
 
-                    
+                    var firstQueue = first;
                     _videoQueueService.Remove(first);
+
+                    var youTube = YouTube.Default;
+                    var video = await youTube.GetVideoAsync(firstQueue.Url).ConfigureAwait(true);
+
 
                     await using (Stream fileStream = await video.StreamAsync())
                     {

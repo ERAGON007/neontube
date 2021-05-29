@@ -23,7 +23,7 @@ namespace NeonTube
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     var port = Environment.GetEnvironmentVariable("PORT");
-                    webBuilder.UseStartup<Startup>().UseUrls($"http://*:{port}");
+                    webBuilder.UseStartup<Startup>().UseKestrel().UseUrls($"http://*:{port}");
                 });
     }
 }
