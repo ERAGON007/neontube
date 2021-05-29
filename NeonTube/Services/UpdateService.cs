@@ -47,6 +47,7 @@ namespace NeonTube.Services
             if (!Uri.IsWellFormedUriString(message.Text, UriKind.Absolute))
             {
                 await _botService.Client.SendTextMessageAsync(message.Chat.Id, "Not a valid url!");
+                return;
             }
 
             var split = message.Text.Split(' ');
