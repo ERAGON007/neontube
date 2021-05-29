@@ -30,6 +30,9 @@ namespace NeonTube.Services
 
             var message = update.Message;
 
+            if (message.Text.StartsWith("/"))
+                return;
+
             var split = message.Text.Split(' ');
             if (split.Length > 0)
             {
