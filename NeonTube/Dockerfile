@@ -6,6 +6,7 @@ COPY NeonTube/*.csproj NeonTube/
 RUN dotnet restore
 COPY . .
 
+
 # testing
 FROM build AS testing
 WORKDIR /src/NeonTube
@@ -21,4 +22,4 @@ WORKDIR /app
 COPY --from=publish /src/publish .
 # ENTRYPOINT ["dotnet", "NeonTube.dll"]
 # heroku uses the following
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet NeonTube.dll
+CMD ASPNETCORE_URLS=http://*:80 dotnet NeonTube.dll
