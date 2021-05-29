@@ -42,14 +42,15 @@ namespace NeonTube.Services
 
                 return;
             }
-                
-
-                    
-
             
             Uri uriResult;
             bool result = Uri.TryCreate(message.Text, UriKind.Absolute, out uriResult)
                           && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
+
+            if (!result)
+            {
+                await _botService.Client.SendTextMessageAsync(message.Chat.Id, "Not a valid url!");
+            }
 
             var split = message.Text.Split(' ');
             if (split.Length > 0)
