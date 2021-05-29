@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -31,7 +32,24 @@ namespace NeonTube.Services
             var message = update.Message;
 
             if (message.Text.StartsWith("/"))
+            {
+                if (message.Text == "/start" || message.Text == "/help")
+                {
+                    await _botService.Client.SendTextMessageAsync(message.Chat.Id,
+                        "Welcome, now send me your youtube video url to get it's video!").ConfigureAwait(true);
+                    return;
+                }
+
                 return;
+            }
+                
+
+                    
+
+            
+            Uri uriResult;
+            bool result = Uri.TryCreate(message.Text, UriKind.Absolute, out uriResult)
+                          && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
 
             var split = message.Text.Split(' ');
             if (split.Length > 0)
