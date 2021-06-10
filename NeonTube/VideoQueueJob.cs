@@ -1,10 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components.Forms;
 using NeonTube.Services;
 using Quartz;
+using Telegram.Bot.Types;
 using Telegram.Bot.Types.InputFiles;
 using VideoLibrary;
 
@@ -43,9 +44,20 @@ namespace NeonTube
 
                     await using (Stream fileStream = await video.StreamAsync())
                     {
-                        var sentVideo = await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
-                            new InputOnlineFile(fileStream), replyToMessageId: firstQueue.MessageId);
+                        TimeSpan duration = new TimeSpan();
 
+                        if (video.Info.LengthSeconds != null)
+                        {
+                            duration = TimeSpan.FromSeconds((float)video.Info.LengthSeconds);
+                        }
+                        
+                        string caption = $"Title: {video.Title}<br><br>" +
+                                         $"Length: {duration.Hours}:{duration.Minutes}:{duration.Seconds}<br>";
+                        
+                        await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
+                            new InputOnlineFile(fileStream), replyToMessageId: firstQueue.MessageId,
+                            supportsStreaming: true, thumb: new InputMedia(firstQueue.GetThumbnailUrl()),
+                            caption: caption);
                     }
                 }
                 catch (Exception ex)

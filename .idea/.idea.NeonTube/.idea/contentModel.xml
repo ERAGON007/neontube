@@ -4,6 +4,7 @@
     <e p="C:\Users\_ERAGON_\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\_ERAGON_\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_NeonTube.-999554010.00" t="ExcludeRecursive" />
     <e p="E:\Dotnet-Projects\NeonTube" t="IncludeFlat">
+      <e p=".dockerignore" t="Include" />
       <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="NeonTube" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -13,6 +14,7 @@
         <e p="Controllers" t="Include">
           <e p="UpdateController.cs" t="Include" />
         </e>
+        <e p="Dockerfile" t="Include" />
         <e p="JobSchedule.cs" t="Include" />
         <e p="NeonTube.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -24,6 +26,9 @@
         </e>
         <e p="PendingVideo.cs" t="Include" />
         <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
         <e p="QuartzHostedService.cs" t="Include" />
         <e p="README.md" t="Include" />
         <e p="Services" t="Include">
