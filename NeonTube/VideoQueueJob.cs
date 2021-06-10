@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace NeonTube
         public async Task Execute(IJobExecutionContext context)
         {
             PendingVideo first;
+            PendingVideo firstQueue;
             if (_videoQueueService.Count() > 0)
             {
                 try
@@ -38,7 +40,8 @@ namespace NeonTube
                     if (first == null)
                         return;
 
-                    var firstQueue = first;
+                    firstQueue = first;
+                    
                     _videoQueueService.Remove(first);
 
                     var youTube = YouTube.Default;
@@ -54,8 +57,8 @@ namespace NeonTube
                             duration = TimeSpan.FromSeconds((float)video.Info.LengthSeconds);
                         }
                         
-                        string caption = $"Title: {video.Title}<br><br>" +
-                                         $"Length: {duration.Hours}:{duration.Minutes}:{duration.Seconds}<br><br><br>" +
+                        string caption = $"Title: {video.Title}\n\n" +
+                                         $"Length: <code>{duration.Hours}:{duration.Minutes}:{duration.Seconds}</code>\n\n\n" +
                                          $"Downloaded by: @{_botService.Client.GetMeAsync().Result.Username}";
                         
                         

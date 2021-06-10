@@ -15,7 +15,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d40aca3c-545f-4ef8-9e02-9e65cfdd6ca6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +61,8 @@
         <option value="$PROJECT_DIR$/NeonTube/Dockerfile" />
         <option value="$PROJECT_DIR$/NeonTube/PendingVideo.cs" />
         <option value="$PROJECT_DIR$/NeonTube/Services/BotService.cs" />
-        <option value="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" />
         <option value="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +129,8 @@
       <workItem from="1622237329215" duration="2615000" />
       <workItem from="1622269829589" duration="177000" />
       <workItem from="1623145678186" duration="1335000" />
-      <workItem from="1623335897048" duration="4414000" />
+      <workItem from="1623335897048" duration="7142000" />
+      <workItem from="1623357612804" duration="6000" />
     </task>
     <servers />
   </component>
