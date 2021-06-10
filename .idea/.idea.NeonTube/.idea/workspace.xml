@@ -15,7 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d40aca3c-545f-4ef8-9e02-9e65cfdd6ca6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/875C7F37-F4D4-4C4F-8257-D9B99AC8536C/B0/EditMessageReplyMarkupRequest.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/875C7F37-F4D4-4C4F-8257-D9B99AC8536C/1/TelegramBotClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/875C7F37-F4D4-4C4F-8257-D9B99AC8536C/31/InlineKeyboardButton.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -61,8 +62,8 @@
         <option value="$PROJECT_DIR$/NeonTube/Dockerfile" />
         <option value="$PROJECT_DIR$/NeonTube/PendingVideo.cs" />
         <option value="$PROJECT_DIR$/NeonTube/Services/BotService.cs" />
-        <option value="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" />
         <option value="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" />
       </list>
     </option>
   </component>
@@ -130,7 +131,7 @@
       <workItem from="1622269829589" duration="177000" />
       <workItem from="1623145678186" duration="1335000" />
       <workItem from="1623335897048" duration="7142000" />
-      <workItem from="1623357612804" duration="6000" />
+      <workItem from="1623357612804" duration="1828000" />
     </task>
     <servers />
   </component>

@@ -1,11 +1,14 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.InlineQueryResults;
 using VideoLibrary;
 
 namespace NeonTube.Services
@@ -70,14 +73,23 @@ namespace NeonTube.Services
                     break;
                 }
 
-                case UpdateType.CallbackQuery:
+                case UpdateType.InlineQuery:
                 {
-                    var callbackData = update.CallbackQuery.Data;
-                    if (callbackData != null)
+                    var inlineQuery = update.InlineQuery;
+                    if (inlineQuery != null)
                     {
-                        if (callbackData == "shareThisVideo")
+                        if (inlineQuery.Query.StartsWith("share:"))
                         {
-                            
+                            var response = new InlineQueryResultCachedVideo(Guid.NewGuid().ToString(),
+                                inlineQuery.Query.Split("share:").Last(), "Share this video");
+
+                            var inlineMessageId = update.CallbackQuery.InlineMessageId;
+
+                            await _botService.Client.AnswerInlineQueryAsync(inlineQuery.Id,
+                                new List<InlineQueryResultBase>
+                                {
+                                    response
+                                });
                         }
                     }
                     break;
