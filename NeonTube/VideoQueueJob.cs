@@ -72,7 +72,7 @@ namespace NeonTube
                             new []{ new InlineKeyboardButton()
                             {
                                 Text = "⚡️ Share",
-                                SwitchInlineQuery = "share:" + sentVideo.Video.FileId
+                                SwitchInlineQuery = "sh:" + sentVideo.Video.FileId
                             },  }
                         );
 

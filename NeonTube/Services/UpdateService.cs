@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InlineQueryResults;
+using Telegram.Bot.Types.ReplyMarkups;
 using VideoLibrary;
 
 namespace NeonTube.Services
@@ -78,11 +79,23 @@ namespace NeonTube.Services
                     var inlineQuery = update.InlineQuery;
                     if (inlineQuery != null)
                     {
-                        if (inlineQuery.Query.StartsWith("share:"))
+                        if (inlineQuery.Query.StartsWith("sh:"))
                         {
                             var response = new InlineQueryResultCachedVideo(Guid.NewGuid().ToString(),
-                                inlineQuery.Query.Split("share:").Last(), "Share this video");
+                                inlineQuery.Query.Split("sh:").Last(), "Share this video")
+                            {
+                                ReplyMarkup = new [] {
+                                new InlineKeyboardButton()
+                                {
+                                    Text = "⚡️ Share",
+                                    SwitchInlineQuery = "sh:" + inlineQuery.Query.Split("sh:").Last()
+                                }
+                                },
+                                Caption = $"Downloaded by: @{_botService.Client.GetMeAsync().Result.Username}",
+                                Description = "To share this video, click here!",
+                            };
 
+                            
                             
 
                             await _botService.Client.AnswerInlineQueryAsync(inlineQuery.Id,
