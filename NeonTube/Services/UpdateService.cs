@@ -83,7 +83,6 @@ namespace NeonTube.Services
                             var response = new InlineQueryResultCachedVideo(Guid.NewGuid().ToString(),
                                 inlineQuery.Query.Split("share:").Last(), "Share this video");
 
-                            var inlineMessageId = update.CallbackQuery.InlineMessageId;
 
                             await _botService.Client.AnswerInlineQueryAsync(inlineQuery.Id,
                                 new List<InlineQueryResultBase>
