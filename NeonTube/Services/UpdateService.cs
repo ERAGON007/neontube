@@ -80,11 +80,10 @@ namespace NeonTube.Services
                     {
                         if (inlineQuery.Query.StartsWith("share:"))
                         {
-                            /*var response = new InlineQueryResultCachedVideo(Guid.NewGuid().ToString(),
-                                inlineQuery.Query.Split("share:").Last(), "Share this video");*/
+                            var response = new InlineQueryResultCachedVideo(Guid.NewGuid().ToString(),
+                                inlineQuery.Query.Split("share:").Last(), "Share this video");
 
-                            var response = new InlineQueryResultArticle(Guid.NewGuid().ToString(), "Hola",
-                                new InputTextMessageContent("Aooooooooooooooooo"));
+                            
 
                             await _botService.Client.AnswerInlineQueryAsync(inlineQuery.Id,
                                 new List<InlineQueryResultBase>
