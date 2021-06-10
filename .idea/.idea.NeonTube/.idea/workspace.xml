@@ -14,10 +14,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d40aca3c-545f-4ef8-9e02-9e65cfdd6ca6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/NeonTube/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/NeonTube/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonTube/PendingVideo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/PendingVideo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +54,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/875C7F37-F4D4-4C4F-8257-D9B99AC8536C/1/TelegramBotClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/875C7F37-F4D4-4C4F-8257-D9B99AC8536C/31/InlineKeyboardButton.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/NeonTube/Dockerfile" />
         <option value="$PROJECT_DIR$/NeonTube/PendingVideo.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/Services/BotService.cs" />
         <option value="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" />
       </list>
     </option>
   </component>
@@ -82,6 +83,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -128,7 +130,7 @@
       <workItem from="1622237329215" duration="2615000" />
       <workItem from="1622269829589" duration="177000" />
       <workItem from="1623145678186" duration="1335000" />
-      <workItem from="1623335897048" duration="3321000" />
+      <workItem from="1623335897048" duration="4414000" />
     </task>
     <servers />
   </component>

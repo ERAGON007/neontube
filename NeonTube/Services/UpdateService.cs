@@ -26,45 +26,65 @@ namespace NeonTube.Services
 
         public async Task HandleUpdate(Update update)
         {
-            if (update.Type != UpdateType.Message)
-                return;
-
-            var message = update.Message;
-
-            if (message.Text.StartsWith("/"))
+            switch (update.Type)
             {
-                if (message.Text == "/start" || message.Text == "/help")
+                case UpdateType.Message:
                 {
-                    await _botService.Client.SendTextMessageAsync(message.Chat.Id,
-                        "Welcome, now send me your youtube video url to get it's video!").ConfigureAwait(true);
-                    return;
+                    var message = update.Message;
+
+                    if (message.Text.StartsWith("/"))
+                    {
+                        if (message.Text == "/start" || message.Text == "/help")
+                        {
+                            await _botService.Client.SendTextMessageAsync(message.Chat.Id,
+                                "Welcome, now send me your youtube video url to get it's video!").ConfigureAwait(true);
+                            return;
+                        }
+
+                        return;
+                    }
+            
+
+                    if (!Uri.IsWellFormedUriString(message.Text, UriKind.Absolute))
+                    {
+                        await _botService.Client.SendTextMessageAsync(message.Chat.Id, "Not a valid url!");
+                        return;
+                    }
+
+                    var split = message.Text.Split(' ');
+                    if (split.Length > 0)
+                    {
+                        await _botService.Client.SendTextMessageAsync(message.Chat.Id,
+                            $"Added URL <code>{split[0]}</code> To Queue! your video will be sent soon",
+                            ParseMode.Html);
+                        var newVideo = new PendingVideo(split[0], message.Chat.Id, message.MessageId);
+                        _videoQueueService.Add(newVideo);
+                    }
+                    else
+                    {
+                        await _botService.Client.SendTextMessageAsync(message.Chat.Id,
+                            "Syntax: <code>/yt https://youtube.com</code>",
+                            ParseMode.Html);
+                    }
+
+                    break;
                 }
 
-                return;
+                case UpdateType.CallbackQuery:
+                {
+                    var callbackData = update.CallbackQuery.Data;
+                    if (callbackData != null)
+                    {
+                        if (callbackData == "shareThisVideo")
+                        {
+                            
+                        }
+                    }
+                    break;
+                }
             }
             
 
-            if (!Uri.IsWellFormedUriString(message.Text, UriKind.Absolute))
-            {
-                await _botService.Client.SendTextMessageAsync(message.Chat.Id, "Not a valid url!");
-                return;
-            }
-
-            var split = message.Text.Split(' ');
-            if (split.Length > 0)
-            {
-                await _botService.Client.SendTextMessageAsync(message.Chat.Id,
-                    $"Added URL <code>{split[0]}</code> To Queue! your video will be sent soon",
-                    ParseMode.Html);
-                var newVideo = new PendingVideo(split[0], message.Chat.Id, message.MessageId);
-                _videoQueueService.Add(newVideo);
-            }
-            else
-            {
-                await _botService.Client.SendTextMessageAsync(message.Chat.Id,
-                    "Syntax: <code>/yt https://youtube.com</code>",
-                    ParseMode.Html);
-            }
         }
     }
 }

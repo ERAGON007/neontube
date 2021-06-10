@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -6,7 +7,9 @@ using Microsoft.AspNetCore.Components.Forms;
 using NeonTube.Services;
 using Quartz;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.InputFiles;
+using Telegram.Bot.Types.ReplyMarkups;
 using VideoLibrary;
 
 namespace NeonTube
@@ -52,12 +55,27 @@ namespace NeonTube
                         }
                         
                         string caption = $"Title: {video.Title}<br><br>" +
-                                         $"Length: {duration.Hours}:{duration.Minutes}:{duration.Seconds}<br>";
+                                         $"Length: {duration.Hours}:{duration.Minutes}:{duration.Seconds}<br><br><br>" +
+                                         $"Downloaded by: @{_botService.Client.GetMeAsync().Result.Username}";
                         
-                        await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
+                        
+                        
+                        var sentVideo = await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
                             new InputOnlineFile(fileStream), replyToMessageId: firstQueue.MessageId,
                             supportsStreaming: true, thumb: new InputMedia(firstQueue.GetThumbnailUrl()),
-                            caption: caption);
+                            caption: caption, parseMode: ParseMode.Html);
+                        
+                        IReplyMarkup replyMarkup = new InlineKeyboardMarkup(
+                            new []{ new InlineKeyboardButton()
+                            {
+                                Text = "⚡️ Share",
+                                SwitchInlineQuery = "share:" + sentVideo.Video.FileId
+                            },  }
+                        );
+
+                        await _botService.Client.EditMessageReplyMarkupAsync(sentVideo.Chat.Id,
+                            sentVideo.MessageId, (InlineKeyboardMarkup)replyMarkup);
+
                     }
                 }
                 catch (Exception ex)
