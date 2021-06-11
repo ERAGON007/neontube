@@ -9,7 +9,7 @@ namespace NeonTube.Services
     {
         //private readonly BotConfiguration _config;
 
-        public BotService(IOptions<BotConfiguration> config)
+        public BotService()
         {
             // _config = config.Value;
             Client = new TelegramBotClient(Environment.GetEnvironmentVariable("BotToken"));
