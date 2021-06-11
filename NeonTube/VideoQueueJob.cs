@@ -56,14 +56,13 @@ namespace NeonTube
                         {
                             duration = TimeSpan.FromSeconds((float)video.Info.LengthSeconds);
                         }
-                        
+
                         string caption = $"Title: {video.Title}\n\n" +
-                                         $"Length: <code>{duration.Hours}:{duration.Minutes}:{duration.Seconds}</code>\n\n\n" +
-                                         $"Downloaded by: @{_botService.Client.GetMeAsync().Result.Username}";
-                        
-                        
-                        
-                        var sentVideo = await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
+                                         $"Length: <code>{duration.Hours}:{duration.Minutes}:{duration.Seconds}</code>\n\n\n";
+
+
+
+                                         var sentVideo = await _botService.Client.SendVideoAsync(firstQueue.ForChatId,
                             new InputOnlineFile(fileStream), replyToMessageId: firstQueue.MessageId,
                             supportsStreaming: true, thumb: new InputMedia(firstQueue.GetThumbnailUrl()),
                             caption: caption, parseMode: ParseMode.Html);

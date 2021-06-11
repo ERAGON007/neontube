@@ -15,8 +15,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d40aca3c-545f-4ef8-9e02-9e65cfdd6ca6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NeonTube/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/BotConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/BotConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/Services/BotService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/Services/BotService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NeonTube/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/NeonTube/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +64,13 @@
       <list>
         <option value="$PROJECT_DIR$/NeonTube/Dockerfile" />
         <option value="$PROJECT_DIR$/NeonTube/PendingVideo.cs" />
-        <option value="$PROJECT_DIR$/NeonTube/Services/BotService.cs" />
         <option value="$PROJECT_DIR$/NeonTube/VideoQueueJob.cs" />
         <option value="$PROJECT_DIR$/NeonTube/Services/UpdateService.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/BotConfiguration.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/Startup.cs" />
+        <option value="$PROJECT_DIR$/NeonTube/appsettings.json" />
+        <option value="$PROJECT_DIR$/NeonTube/appsettings.Development.json" />
+        <option value="$PROJECT_DIR$/NeonTube/Services/BotService.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +138,8 @@
       <workItem from="1622269829589" duration="177000" />
       <workItem from="1623145678186" duration="1335000" />
       <workItem from="1623335897048" duration="7142000" />
-      <workItem from="1623357612804" duration="3944000" />
+      <workItem from="1623357612804" duration="4409000" />
+      <workItem from="1623407105398" duration="1151000" />
     </task>
     <servers />
   </component>

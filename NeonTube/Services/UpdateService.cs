@@ -91,7 +91,6 @@ namespace NeonTube.Services
                                     SwitchInlineQuery = "sh:" + inlineQuery.Query.Split("sh:").Last()
                                 }
                                 },
-                                Caption = $"Downloaded by: @{_botService.Client.GetMeAsync().Result.Username}",
                                 Description = "To share this video, click here!",
                             };
 
